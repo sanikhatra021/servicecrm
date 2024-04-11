@@ -69,58 +69,11 @@
 																										
                             </a>
 						</li>  
-							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='complain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')||(basename($_SERVER['PHP_SELF'])=='completedcomplain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')) {echo 'active open';}?>">
-                          <a href="javascript:;" class="nav-link nav-toggle">
-                              <i class="fa fa-user"></i>
-                              <span class="title">Call Management</span>
-                              <span class="arrow"></span>
-                          </a>
-						  <ul class="sub-menu">
-							 
-								   
-<?php 
-if($_SESSION['utype']=='Admin' || $_SESSION['utype']=='serviceengineer')
-	{
-?>	
-							 <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='complain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')) {echo 'current';}?>">	
-                                     <a href="complain.php?cstatus=All" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Call Management </span>
-                                     </a>
-							</li>
-								
-							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='completedcomplain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')) {echo 'current';}?>">	
-                                     <a href="completedcomplain.php?cstatus=Completed" class="nav-link ">
-                                         <i class="fa fa-user"></i><span class="title">Completed Call </span>
-                                     </a>
-							</li>	 
-<?php } ?>
-							</ul>
-							</li>
+						
 						<?php
-if($_SESSION['utype']=='Admin')
-	{
-?>						<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='service.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php') || (basename($_SERVER['PHP_SELF'])=='servicedetail.php') || (basename($_SERVER['PHP_SELF'])=='callupcomming.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php')) {echo 'active open';}?>">
-                          <a href="javascript:;" class="nav-link nav-toggle">
-                              <i class="fa fa-user"></i>
-                              <span class="title">Service Contract </span>
-                              <span class="arrow"></span>
-                          </a>
-						  <ul class="sub-menu">
-
-								<li class="nav-item   <?php if ((basename($_SERVER['PHP_SELF'])=='service.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php')) {echo 'current';}?>">
-                                     <a href="service.php" class="nav-link ">
-                                         <i class="fa fa-user"></i><span class="title"> Add Service Contract</span>
-                                     </a>
-							</li>
-							<li class="nav-item   <?php if ((basename($_SERVER['PHP_SELF'])=='callupcomming.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php')) {echo 'current';}?>">
-                                     <a href="callupcomming.php" class="nav-link ">
-                                         <i class="fa fa-user"></i><span class="title"> Upcomming Service </span>
-                                     </a>
-							</li>
-							
-							</ul>
-							</li>
-									<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='workorder.php') || (basename($_SERVER['PHP_SELF'])=='workorderadd.php') || (basename($_SERVER['PHP_SELF'])=='workorderedit.php')|| (basename($_SERVER['PHP_SELF'])=='workorderdetail.php') ||(basename($_SERVER['PHP_SELF'])=='deliverydispatch.php') || (basename($_SERVER['PHP_SELF'])=='deliverydispatchadd.php') || (basename($_SERVER['PHP_SELF'])=='deliverydetail.php')  ) {echo 'active open';}?>">
+if($_SESSION['utype']=='Admin'){
+?>		
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='workorder.php') || (basename($_SERVER['PHP_SELF'])=='workorderadd.php') || (basename($_SERVER['PHP_SELF'])=='workorderedit.php')|| (basename($_SERVER['PHP_SELF'])=='workorderdetail.php') ||(basename($_SERVER['PHP_SELF'])=='deliverydispatch.php') || (basename($_SERVER['PHP_SELF'])=='deliverydispatchadd.php') || (basename($_SERVER['PHP_SELF'])=='deliverydetail.php')  ) {echo 'active open';}?>">
                           <a href="javascript:;" class="nav-link nav-toggle">
                               <i class="fa fa-list"></i>
                               <span class="title">Project Management</span>
@@ -145,7 +98,93 @@ if($_SESSION['utype']=='Admin')
 							
 							</ul>
 							</li>
-						<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='user.php') || (basename($_SERVER['PHP_SELF'])=='useradd.php') || (basename($_SERVER['PHP_SELF'])=='useredit.php') || (basename($_SERVER['PHP_SELF'])=='userdetail.php') || (basename($_SERVER['PHP_SELF'])=='complaintype.php') || (basename($_SERVER['PHP_SELF'])=='complaintypeadd.php') || (basename($_SERVER['PHP_SELF'])=='complaintypeedit.php') || (basename($_SERVER['PHP_SELF'])=='complaintypedetail.php') || (basename($_SERVER['PHP_SELF'])=='status.php') || (basename($_SERVER['PHP_SELF'])=='statusadd.php') || (basename($_SERVER['PHP_SELF'])=='statusedit.php') || (basename($_SERVER['PHP_SELF'])=='statusdetail.php') || (basename($_SERVER['PHP_SELF'])=='product.php')  || (basename($_SERVER['PHP_SELF'])=='productadd.php') || (basename($_SERVER['PHP_SELF'])=='productedit.php') || (basename($_SERVER['PHP_SELF'])=='productdetail.php')||(basename($_SERVER['PHP_SELF'])=='company.php') || (basename($_SERVER['PHP_SELF'])=='companyadd.php') || (basename($_SERVER['PHP_SELF'])=='companyedit.php')|| (basename($_SERVER['PHP_SELF'])=='companydetail.php')||(basename($_SERVER['PHP_SELF'])=='faq.php') || (basename($_SERVER['PHP_SELF'])=='faqadd.php') || (basename($_SERVER['PHP_SELF'])=='faqedit.php')|| (basename($_SERVER['PHP_SELF'])=='faqdetails.php')||(basename($_SERVER['PHP_SELF'])=='item.php') || (basename($_SERVER['PHP_SELF'])=='itemadd.php') || (basename($_SERVER['PHP_SELF'])=='itemedit.php')|| (basename($_SERVER['PHP_SELF'])=='itemdetail.php') || (basename($_SERVER['PHP_SELF'])=='customer.php') ||(basename($_SERVER['PHP_SELF'])=='customeredit.php') || (basename($_SERVER['PHP_SELF'])=='customerdetail.php') ||  (basename($_SERVER['PHP_SELF'])=='aboutusedit.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasure.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasureadd.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasureedit.php')||  (basename($_SERVER['PHP_SELF'])=='servicetype.php')||  (basename($_SERVER['PHP_SELF'])=='servicetypeadd.php')||  (basename($_SERVER['PHP_SELF'])=='servicetypeedit.php')||  (basename($_SERVER['PHP_SELF'])=='customeradd.php') ||  (basename($_SERVER['PHP_SELF'])=='unitmeasure.php')||  (basename($_SERVER['PHP_SELF'])=='unitmeasureadd.php')||  (basename($_SERVER['PHP_SELF'])=='problemtype.php') ||  (basename($_SERVER['PHP_SELF'])=='problemtypeedit.php')||  (basename($_SERVER['PHP_SELF'])=='problemtypeadd.php') ) {echo 'active open';}?>">
+						
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='service.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php')|| (basename($_SERVER['PHP_SELF'])=='complain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')||(basename($_SERVER['PHP_SELF'])=='completedcomplain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')|| (basename($_SERVER['PHP_SELF'])=='servicedetail.php')) {echo 'active open';}?>">
+                          <a href="javascript:;" class="nav-link nav-toggle">
+                              <i class="fa fa-user"></i>
+                              <span class="title">Service Management</span>
+                              <span class="arrow"></span>
+                          </a>
+						  <ul class="sub-menu">
+							 
+								   <li class="nav-item   <?php if ((basename($_SERVER['PHP_SELF'])=='service.php') || (basename($_SERVER['PHP_SELF'])=='serviceadd.php')  || (basename($_SERVER['PHP_SELF'])=='servicenewedit.php') || (basename($_SERVER['PHP_SELF'])=='amcedit.php')) {echo 'current';}?>">
+                                     <a href="service.php" class="nav-link ">
+                                         <i class="fa fa-user"></i><span class="title"> Add Service (PPM)</span>
+                                     </a>
+							</li>
+<?php  }
+if($_SESSION['utype']=='Admin' || $_SESSION['utype']=='serviceengineer'){
+?>	
+							 <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='complain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')) {echo 'current';}?>">	
+                                     <a href="complain.php?cstatus=All" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">Call Management </span>
+                                     </a>
+							</li>
+								
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='completedcomplain.php') || (basename($_SERVER['PHP_SELF'])=='complainadd.php') || (basename($_SERVER['PHP_SELF'])=='complainedit.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetail.php')|| (basename($_SERVER['PHP_SELF'])=='complaindetailprint.php')) {echo 'current';}?>">	
+                                     <a href="completedcomplain.php?cstatus=Completed" class="nav-link ">
+                                         <i class="fa fa-user"></i><span class="title">Completed Call </span>
+                                     </a>
+							</li>	 
+<?php } ?>
+							</ul>
+							</li>
+                        <!--<li class="heading">
+                            <h3 class="uppercase">Manage</h3>
+							</li>-->
+							<?php
+if($_SESSION['utype']=='Admin'){
+?>	
+									<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportamcalert.php') || (basename($_SERVER['PHP_SELF'])=='reportcomplaindetail.php') || (basename($_SERVER['PHP_SELF'])=='ufeedback.php') ||(basename($_SERVER['PHP_SELF'])=='ufeedbackdelete.php')  || (basename($_SERVER['PHP_SELF'])=='upcomingservicerenewal.php')|| (basename($_SERVER['PHP_SELF'])=='reportcompletedcall.php')|| (basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php') ) {echo 'active open';}?>">
+                          <a href="javascript:;" class="nav-link nav-toggle">
+                              <i class="fa fa-bar-chart"></i>
+                              <span class="title">Report</span>
+                              <span class="arrow"></span>
+                          </a>
+						  <ul class="sub-menu">
+						  
+						  <!--<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='complainreminder.php')   ) {echo 'current';}?>">	
+                                     <a href="complainreminder.php" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">Complain Reminder</span>
+                                     </a>
+							</li>-->  
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportcomplaindetail.php')   ) {echo 'current';}?>">	
+                                     <a href="reportcomplaindetail.php" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">All Service Report  </span>
+                                     </a>
+							</li> 
+									<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportcompletedcall.php')   ) {echo 'current';}?>">	
+                                     <a href="reportcompletedcall.php" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">Completed Service Call  </span>
+                                     </a>
+							</li> 
+						   <!-- <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php')   ) {echo 'current';}?>">	
+                                     <a href="reportpendingpayment.php" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">Pending Payment </span>
+                                     </a>
+							</li>-->
+							 <!--<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='ufeedback.php') ) {echo 'current';}?>">	
+                                     <a href="ufeedback.php" class="nav-link ">
+                                         <i class="fa fa-comments-o"></i><span class="title"> Feedback </span>
+                                     </a>
+							</li>-->
+							  <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='upcomingservicerenewal.php') ) {echo 'current';}?>">	
+                                     <a href="upcomingservicerenewal.php" class="nav-link ">
+                                         <i class="fa fa-gear"></i><span class="title">Upcoming Service Renewal </span>
+                                     </a>
+							</li>
+							  <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php')   ) {echo 'current';}?>">	
+                                     <a href="reportpendingpayment.php" class="nav-link ">
+                                         <i class="fa fa-user-plus"></i><span class="title">Pending Payment Report</span>
+                                     </a>
+							</li>
+							
+							</ul>
+							</li>
+							
+							
+							
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='user.php') || (basename($_SERVER['PHP_SELF'])=='useradd.php') || (basename($_SERVER['PHP_SELF'])=='useredit.php') || (basename($_SERVER['PHP_SELF'])=='userdetail.php') || (basename($_SERVER['PHP_SELF'])=='complaintype.php') || (basename($_SERVER['PHP_SELF'])=='complaintypeadd.php') || (basename($_SERVER['PHP_SELF'])=='complaintypeedit.php') || (basename($_SERVER['PHP_SELF'])=='complaintypedetail.php') || (basename($_SERVER['PHP_SELF'])=='status.php') || (basename($_SERVER['PHP_SELF'])=='statusadd.php') || (basename($_SERVER['PHP_SELF'])=='statusedit.php') || (basename($_SERVER['PHP_SELF'])=='statusdetail.php') || (basename($_SERVER['PHP_SELF'])=='product.php')  || (basename($_SERVER['PHP_SELF'])=='productadd.php') || (basename($_SERVER['PHP_SELF'])=='productedit.php') || (basename($_SERVER['PHP_SELF'])=='productdetail.php')||(basename($_SERVER['PHP_SELF'])=='company.php') || (basename($_SERVER['PHP_SELF'])=='companyadd.php') || (basename($_SERVER['PHP_SELF'])=='companyedit.php')|| (basename($_SERVER['PHP_SELF'])=='companydetail.php')||(basename($_SERVER['PHP_SELF'])=='faq.php') || (basename($_SERVER['PHP_SELF'])=='faqadd.php') || (basename($_SERVER['PHP_SELF'])=='faqedit.php')|| (basename($_SERVER['PHP_SELF'])=='faqdetails.php')||(basename($_SERVER['PHP_SELF'])=='item.php') || (basename($_SERVER['PHP_SELF'])=='itemadd.php') || (basename($_SERVER['PHP_SELF'])=='itemedit.php')|| (basename($_SERVER['PHP_SELF'])=='itemdetail.php') || (basename($_SERVER['PHP_SELF'])=='customer.php') ||(basename($_SERVER['PHP_SELF'])=='customeredit.php') || (basename($_SERVER['PHP_SELF'])=='customerdetail.php') ||  (basename($_SERVER['PHP_SELF'])=='aboutusedit.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasure.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasureadd.php')||  (basename($_SERVER['PHP_SELF'])=='usermeasureedit.php')||  (basename($_SERVER['PHP_SELF'])=='servicetype.php')||  (basename($_SERVER['PHP_SELF'])=='servicetypeadd.php')||  (basename($_SERVER['PHP_SELF'])=='servicetypeedit.php')||  (basename($_SERVER['PHP_SELF'])=='customeradd.php') ||  (basename($_SERVER['PHP_SELF'])=='unitmeasure.php')||  (basename($_SERVER['PHP_SELF'])=='unitmeasureadd.php')||  (basename($_SERVER['PHP_SELF'])=='problemtype.php') ||  (basename($_SERVER['PHP_SELF'])=='problemtypeedit.php')||  (basename($_SERVER['PHP_SELF'])=='problemtypeadd.php') ) {echo 'active open';}?>">
                           <a href="javascript:;" class="nav-link nav-toggle">
                               <i class="fa fa-list"></i>
                               <span class="title"> Master</span>
@@ -197,7 +236,7 @@ if($_SESSION['utype']=='Admin')
 							</li>
 							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='servicetype.php') || (basename($_SERVER['PHP_SELF'])=='servicetypeadd.php') || (basename($_SERVER['PHP_SELF'])=='servicetypeedit.php')) {echo 'current';}?>">
                                      <a href="servicetype.php" class="nav-link ">
-                                         <i class="fa fa-gear"></i><span class="title"> Contract Type </span>
+                                         <i class="fa fa-gear"></i><span class="title"> Service Type </span>
                                      </a>
 							</li>
 							
@@ -211,128 +250,6 @@ if($_SESSION['utype']=='Admin')
 					
 							 </ul>
 							 </li>
-	<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='banner.php') || (basename($_SERVER['PHP_SELF'])=='banneradd.php') || (basename($_SERVER['PHP_SELF'])=='banneredit.php')|| (basename($_SERVER['PHP_SELF'])=='bannerdetail.php') ||(basename($_SERVER['PHP_SELF'])=='email.php') || (basename($_SERVER['PHP_SELF'])=='emailadd.php') || (basename($_SERVER['PHP_SELF'])=='emailedit.php') || (basename($_SERVER['PHP_SELF'])=='setting.php') || (basename($_SERVER['PHP_SELF'])=='settingedit.php')||(basename($_SERVER['PHP_SELF'])=='myprofile.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php') || (basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php')) {echo 'active open';}?>">
-                          <a href="javascript:;" class="nav-link nav-toggle">
-                              <i class="fa fa-wrench"></i>
-                              <span class="title">Settings</span>
-                              <span class="arrow"></span>
-                          </a>
-						  <ul class="sub-menu">
-							 
-							
-							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='banner.php') || (basename($_SERVER['PHP_SELF'])=='banneradd.php') || (basename($_SERVER['PHP_SELF'])=='banneredit.php')|| (basename($_SERVER['PHP_SELF'])=='bannerdetail.php') || (basename($_SERVER['PHP_SELF'])=='setting.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php') || (basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php') ) {echo 'current';}?>">	
-                                
-<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='setting.php') ) {echo 'current';}?>"> 
-									  <a href="setting.php" class="nav-link ">
-                                         <i class="fa fa-cog"></i> <span class="title">General Setting</span>
-                                     </a>
-								</li>		
-<li class="nav-item start <?php if (basename($_SERVER['PHP_SELF'])=='myprofile.php') {echo 'current';}?>">
-                            <a href="myprofile.php" class="nav-link nav-toggle">
-                                <i class="fa fa-file"></i>
-                                <span class="title">My Profile</span>
-																										
-                            </a>
-						</li>								
-						
-									 <li class="nav-item  <?php if ((basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php')) {echo 'current';}?>">
-									<a href="emailtemplate.php" class="nav-link ">
-										<i class="fa fa-gear"></i><span class="title"> Email Template </span>
-									</a>
-								</li> 
-								<li class="nav-item  <?php if ((basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php')) {echo 'current';}?>">
-									<a href="watemplate.php" class="nav-link ">
-										<i class="fa fa-gear"></i><span class="title"> Whatsapp Template </span>
-									</a>
-								</li>
-									 
-							</li> 
-							
-							</ul>
-							</li>
-
-
-
-
-
-
-
-
-
-
-
-					
-	<?php }
-?>	
-						
-                        <!--<li class="heading">
-                            <h3 class="uppercase">Manage</h3>
-							</li>-->
-							<?php
-					if($_SESSION['utype']=='Admin')
-						{
-					?>	
-									<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportamcalert.php') || (basename($_SERVER['PHP_SELF'])=='reportcomplaindetail.php') || (basename($_SERVER['PHP_SELF'])=='reportcomplainreminder.php') || (basename($_SERVER['PHP_SELF'])=='ufeedback.php') ||(basename($_SERVER['PHP_SELF'])=='ufeedbackdelete.php')  || (basename($_SERVER['PHP_SELF'])=='upcomingservicerenewal.php')|| (basename($_SERVER['PHP_SELF'])=='reportcompletedcall.php')|| (basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php') || (basename($_SERVER['PHP_SELF'])=='revenewreport.php') ) {echo 'active open';}?>">
-                          <a href="javascript:;" class="nav-link nav-toggle">
-                              <i class="fa fa-bar-chart"></i>
-                              <span class="title">Report</span>
-                              <span class="arrow"></span>
-                          </a>
-						  <ul class="sub-menu">
-						  
-						  <!--<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='complainreminder.php')   ) {echo 'current';}?>">	
-                                     <a href="complainreminder.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Complain Reminder</span>
-                                     </a>
-							</li>-->  
-							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportcomplaindetail.php')   ) {echo 'current';}?>">	
-                                     <a href="reportcomplaindetail.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">All Call Report  </span>
-                                     </a>
-							</li> 
-									<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportcompletedcall.php')   ) {echo 'current';}?>">	
-                                     <a href="reportcompletedcall.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Completed Service Call  </span>
-                                     </a>
-							</li> 
-						   <!-- <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php')   ) {echo 'current';}?>">	
-                                     <a href="reportpendingpayment.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Pending Payment </span>
-                                     </a>
-							</li>-->
-							 <!--<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='ufeedback.php') ) {echo 'current';}?>">	
-                                     <a href="ufeedback.php" class="nav-link ">
-                                         <i class="fa fa-comments-o"></i><span class="title"> Feedback </span>
-                                     </a>
-							</li>-->
-							  <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='upcomingservicerenewal.php') ) {echo 'current';}?>">	
-                                     <a href="upcomingservicerenewal.php" class="nav-link ">
-                                         <i class="fa fa-gear"></i><span class="title">Upcoming Service Contract Renewal </span>
-                                     </a>
-							</li>
-							  <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportpendingpayment.php')   ) {echo 'current';}?>">	
-                                     <a href="reportpendingpayment.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Pending Payment Report</span>
-                                     </a>
-							</li>
-							
-							 <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='revenewreport.php')   ) {echo 'current';}?>">	
-                                     <a href="revenewreport.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Revenue Report</span>
-                                     </a>
-							</li>
-							 <li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='reportcomplainreminder.php')   ) {echo 'current';}?>">	
-                                     <a href="reportcomplainreminder.php" class="nav-link ">
-                                         <i class="fa fa-user-plus"></i><span class="title">Call Reminder</span>
-                                     </a>
-							</li>
-							
-							</ul>
-							</li>
-							
-							
-							
-							
 							 
 							
 							
@@ -358,7 +275,50 @@ if($_SESSION['utype']=='Admin')
 							 
 					
 							
-						
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='banner.php') || (basename($_SERVER['PHP_SELF'])=='banneradd.php') || (basename($_SERVER['PHP_SELF'])=='banneredit.php')|| (basename($_SERVER['PHP_SELF'])=='bannerdetail.php') ||(basename($_SERVER['PHP_SELF'])=='email.php') || (basename($_SERVER['PHP_SELF'])=='emailadd.php') || (basename($_SERVER['PHP_SELF'])=='emailedit.php') || (basename($_SERVER['PHP_SELF'])=='setting.php') || (basename($_SERVER['PHP_SELF'])=='settingedit.php')||(basename($_SERVER['PHP_SELF'])=='myprofile.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php') || (basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php')) {echo 'active open';}?>">
+                          <a href="javascript:;" class="nav-link nav-toggle">
+                              <i class="fa fa-wrench"></i>
+                              <span class="title">Settings</span>
+                              <span class="arrow"></span>
+                          </a>
+						  <ul class="sub-menu">
+							 
+							
+							<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='banner.php') || (basename($_SERVER['PHP_SELF'])=='banneradd.php') || (basename($_SERVER['PHP_SELF'])=='banneredit.php')|| (basename($_SERVER['PHP_SELF'])=='bannerdetail.php') || (basename($_SERVER['PHP_SELF'])=='setting.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php') || (basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php') ) {echo 'current';}?>">	
+                                
+<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='setting.php') ) {echo 'current';}?>"> 
+									  <a href="setting.php" class="nav-link ">
+                                         <i class="fa fa-cog"></i> <span class="title">General Setting</span>
+                                     </a>
+								</li>		
+<li class="nav-item start <?php if (basename($_SERVER['PHP_SELF'])=='myprofile.php') {echo 'current';}?>">
+                            <a href="myprofile.php" class="nav-link nav-toggle">
+                                <i class="fa fa-file"></i>
+                                <span class="title">My Profile</span>
+																										
+                            </a>
+						</li>								
+								<li class="nav-item <?php if ((basename($_SERVER['PHP_SELF'])=='banner.php') ) {echo 'current';}?>"> 
+									 <a href="banner.php" class="nav-link ">
+                                         <i class="fa fa-photo"></i> <span class="title">Banner</span>
+                                     </a>
+									 
+								</li>
+									 <li class="nav-item  <?php if ((basename($_SERVER['PHP_SELF'])=='emailtemplate.php') || (basename($_SERVER['PHP_SELF'])=='emailtemplateadd.php')) {echo 'current';}?>">
+									<a href="emailtemplate.php" class="nav-link ">
+										<i class="fa fa-gear"></i><span class="title"> Email Template </span>
+									</a>
+								</li> 
+								<li class="nav-item  <?php if ((basename($_SERVER['PHP_SELF'])=='watemplate.php') || (basename($_SERVER['PHP_SELF'])=='watemplateadd.php')) {echo 'current';}?>">
+									<a href="watemplate.php" class="nav-link ">
+										<i class="fa fa-gear"></i><span class="title"> Whatsapp Template </span>
+									</a>
+								</li>
+									 
+							</li> 
+							
+							</ul>
+							</li>
 <?php } ?>
 							
 							<li class="nav-item start ">
