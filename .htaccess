@@ -1,0 +1,2 @@
+RewriteRule ^([-\w]+)$ home.php?url=$1 [NC,L]
+Options -Indexes
